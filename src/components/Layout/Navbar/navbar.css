@@ -1,0 +1,64 @@
+.navbar-wrapper {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 72px;
+  line-height: 100%;
+  font-size: 2rem;
+}
+.logo_prefix {
+  color: #ffffff;
+}
+.logo_title {
+  color: #fa8b02;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.navbar .active {
+  border-bottom: 2px solid #fa8b02;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+.navbar-actions .action-select {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-actions .auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.navbar-actions .auth-buttons .auth-login {
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+.navbar-actions .auth-buttons .signUp-signup {
+  border: none;
+  background-color: #fa8b02;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  color: white;
+}/*# sourceMappingURL=navbar.css.map */

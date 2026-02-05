@@ -1,0 +1,71 @@
+@import "../../../styles/variable.scss";
+$background-transparent: transparent;
+
+.navbar-wrapper {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+  background-color: $navbar-bg-color;
+  font-size: 1.2rem;
+}
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 72px;
+  line-height: 100%;
+  font-size: 2rem;
+
+  &_prefix {
+    color: $primary-color;
+  }
+
+  &_title {
+    color: $secondary-color;
+  }
+}
+.navbar {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  .active {
+    border-bottom: 2px solid $secondary-color;
+  }
+}
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+
+  .action-select {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: $background-transparent;
+    color: $primary-color;
+  }
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+
+    .auth-login {
+      border: none;
+      background-color: $background-transparent;
+      color: $primary-color;
+    }
+
+    .signUp-signup {
+      border: none;
+      background-color: $secondary-color;
+      padding: 0.5rem 2rem;
+      border-radius: 50px;
+      color: white;
+    }
+  }
+}
