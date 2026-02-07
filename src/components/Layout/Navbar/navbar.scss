@@ -1,54 +1,95 @@
-@import "../../../styles/variable.scss";
+@use "../../../styles/variable" as v;
 $background-transparent: transparent;
 
 .navbar-wrapper {
-  display: flex;
+  @include v.flex-header(flex, center, space-around);
   padding: 1rem 2rem;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0.5rem;
-  background-color: $navbar-bg-color;
-  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  background-color: v.$navbar-bg-color;
+  // font-size: 1.2rem;
+  position: relative;
+  z-index: 100;
 }
 .logo {
-  font-family: "Dancing Script", cursive;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 72px;
-  line-height: 100%;
-  font-size: 2rem;
+  @extend %font-family-logo;
 
   &_prefix {
-    color: $primary-color;
+    color: v.$primary-color;
   }
 
   &_title {
-    color: $secondary-color;
+    color: v.$secondary-color;
   }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: v.$primary-color;
+    border: none;
+    transition: 0.3s;
+    border-radius: 2px;
+  }
+
+  &.open {
+    .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 .navbar {
   display: flex;
   gap: 2rem;
 
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
   a {
     text-decoration: none;
-    color: $primary-color;
+    color: v.$primary-color;
+    font-weight: 500;
+    transition: 0.3s;
   }
 
   .active {
-    border-bottom: 2px solid $secondary-color;
+    border-bottom: 2px solid v.$secondary-color;
   }
 }
 .navbar-actions {
   display: flex;
   gap: 1rem;
-
+  .navbar-action {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
   .action-select {
     cursor: pointer;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
     background-color: $background-transparent;
-    color: $primary-color;
   }
   .auth-buttons {
     display: flex;
@@ -56,16 +97,64 @@ $background-transparent: transparent;
 
     .auth-login {
       border: none;
-      background-color: $background-transparent;
-      color: $primary-color;
+      background: none;
+      color: v.$primary-color;
+      cursor: pointer;
     }
 
     .signUp-signup {
       border: none;
-      background-color: $secondary-color;
+      background-color: v.$secondary-color;
       padding: 0.5rem 2rem;
       border-radius: 50px;
       color: white;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: v.$navbar-bg-color;
+      padding: 2rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.3s ease-out;
+    }
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding-top: 1.5rem;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

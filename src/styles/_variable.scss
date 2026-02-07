@@ -1,3 +1,18 @@
 $primary-color: #ffffff;
 $secondary-color: #fa8b02;
 $navbar-bg-color: #ffffff33;
+
+%font-family-logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 72px;
+  line-height: 100%;
+  font-size: 2rem;
+}
+
+@mixin flex-header($display: flex, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}

@@ -1,1 +1,25 @@
-/*# sourceMappingURL=header.css.map */
+.header-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 72px;
+  line-height: 100%;
+  font-size: 2rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  gap: 1rem;
+}
+
+.header-title {
+  font-size: 2rem;
+}/*# sourceMappingURL=header.css.map */

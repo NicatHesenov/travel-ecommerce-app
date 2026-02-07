@@ -1,0 +1,19 @@
+@use "../../../styles/variable" as v;
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: v.$primary-color;
+  gap: 1rem;
+}
+
+.header-title {
+  @extend %font-family-logo;
+  font-size: 2rem;
+}
