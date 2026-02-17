@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
-import Logo from "../../../assets/logo.jpg";
+import Logo from "../../assets/logo.jpg";
 import { useState } from "react";
+import Button from "../Button/Button";
 const navItems = [
   { id: 1, title: "Home", path: "/" },
   { id: 2, title: "About Us", path: "/about" },
@@ -50,8 +51,8 @@ function Navbar() {
           </select>
 
           <div className="auth-buttons">
-            <button className="auth-login">Login</button>
-            <button className="signUp-signup">Sign Up</button>
+            <Button variant="login">Login</Button>
+            <Button variant="signup">Sign Up</Button>
           </div>
         </div>
       </nav>

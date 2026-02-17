@@ -1,14 +1,15 @@
-@use "../../../styles/variable" as v;
+@use "../../styles/variable" as v;
 $background-transparent: transparent;
 
 .navbar-wrapper {
   @include v.flex-header(flex, center, space-around);
   padding: 1rem 2rem;
-  padding: 0.5rem 2rem;
   background-color: v.$navbar-bg-color;
-  // font-size: 1.2rem;
-  position: relative;
-  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .logo {
   @extend %font-family-logo;
@@ -60,7 +61,7 @@ $background-transparent: transparent;
 .navbar {
   display: flex;
   gap: 2rem;
-
+  align-items: center;
   .nav-menu {
     display: flex;
     gap: 2rem;
@@ -94,21 +95,7 @@ $background-transparent: transparent;
   .auth-buttons {
     display: flex;
     gap: 1rem;
-
-    .auth-login {
-      border: none;
-      background: none;
-      color: v.$primary-color;
-      cursor: pointer;
-    }
-
-    .signUp-signup {
-      border: none;
-      background-color: v.$secondary-color;
-      padding: 0.5rem 2rem;
-      border-radius: 50px;
-      color: white;
-    }
+    align-items: center;
   }
 }
 
@@ -135,7 +122,7 @@ $background-transparent: transparent;
 
   .nav-menu {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
   .navbar-actions {

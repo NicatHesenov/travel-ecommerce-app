@@ -1,0 +1,58 @@
+@use "../../../styles/variable" as v;
+
+.aboutCompany-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 10%;
+
+  .aboutCompany-imageWrapper {
+    flex: 1;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .aboutCompany-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1.2;
+    gap: 10px;
+
+    .aboutCompany-statsGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 30px;
+      gap: 20px;
+
+      .aboutCompany-statItem {
+        font-size: 1.3rem;
+
+        .aboutCompany-num {
+          color: v.$secondary-color;
+          font-weight: bold;
+        }
+
+        .aboutCompany-label {
+          white-space: pre-line;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutCompany-container {
+    flex-direction: column;
+    padding: 40px 5%;
+
+    .aboutCompany-content {
+      .aboutCompany-statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+  }
+}

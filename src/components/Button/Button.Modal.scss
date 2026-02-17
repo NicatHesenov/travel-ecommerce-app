@@ -1,0 +1,15 @@
+@use "../../styles/variable" as v;
+.login {
+  border: none;
+  background: none;
+  color: v.$primary-color;
+  cursor: pointer;
+}
+
+.signup {
+  border: none;
+  background-color: v.$secondary-color;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  color: white;
+}

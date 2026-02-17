@@ -1,4 +1,4 @@
-import BookingWidget from "../BookingWidget/BookingWidget";
+import BookingWidget from "../../../components/BookingWidget/BookingWidget";
 import "./header.scss";
 function Header() {
   return (
