@@ -1,0 +1,32 @@
+.travelServices {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 25px auto 0;
+  gap: 20px;
+  &-container {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+  }
+
+  &-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  &-title {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  &-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+}

@@ -41,6 +41,10 @@
     gap: 0.5rem;
   }
 }
+.read-more {
+  text-decoration: none;
+  color: v.$secondary-color;
+}
 .destinations-description {
   @include v.line-clamp(2);
 }

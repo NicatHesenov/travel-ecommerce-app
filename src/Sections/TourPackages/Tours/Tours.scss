@@ -1,0 +1,32 @@
+@use "../../../styles/variable" as v;
+
+.tour-packages-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

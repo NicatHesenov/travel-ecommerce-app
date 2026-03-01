@@ -12,4 +12,15 @@
   padding: 0.5rem 2rem;
   border-radius: 50px;
   color: white;
+  cursor: pointer;
+}
+.contactUs {
+  border: none;
+  background-color: v.$secondary-color;
+  padding: 0.8rem 6rem;
+  border-radius: 50px;
+  color: white;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
 }

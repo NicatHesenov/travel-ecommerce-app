@@ -1,13 +1,16 @@
+import { Outlet } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import Home from "../../pages/Home/Home";
 import "./mainLayout.scss";
 function MainLayout() {
   return (
     <div className="hero">
       <Navbar />
       <main>
-        <Home />
+        <Outlet />
       </main>
+
+      <Footer />
     </div>
   );
 }

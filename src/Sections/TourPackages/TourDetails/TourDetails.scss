@@ -1,0 +1,202 @@
+@use "../../../styles/variable" as v;
+
+.tour-details-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  gap: 60px;
+  overflow-x: hidden;
+  .backNav {
+    cursor: pointer;
+    color: gray;
+  }
+  .tour-header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+
+    .header-img {
+      flex: 1.2;
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-info {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .info-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #333;
+        line-height: 1.2;
+      }
+
+      .info-price {
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .price {
+          color: v.$secondary-color;
+          font-size: 32px;
+          font-weight: 700;
+        }
+      }
+
+      .info-description {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .info-select {
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .ant-picker-calendar {
+        background: #fff;
+        border-radius: 12px;
+        padding: 10px;
+      }
+
+      button {
+        width: 100%;
+        background-color: v.$secondary-color;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .tour-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+
+    h3 {
+      font-size: 28px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: v.$secondary-color;
+      }
+    }
+
+    .detail-description {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      color: #333;
+
+      .detail-icon {
+        color: v.$secondary-color;
+        font-size: 22px;
+        display: flex;
+      }
+    }
+  }
+
+  .tour-gallery-section {
+    width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    .gallery-slide-item {
+      width: 100%;
+      height: 220px;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .tour-details-page {
+    .tour-header {
+      flex-direction: column;
+
+      .header-img {
+        height: 400px;
+      }
+
+      .header-info {
+        width: 100%;
+
+        .info-title {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .tour-details-page {
+    padding: 40px 15px;
+
+    .gallery-slide-item {
+      height: 150px;
+    }
+  }
+}

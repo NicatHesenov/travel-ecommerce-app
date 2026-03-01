@@ -2,11 +2,13 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 import type Tour from "../../../types/Tour";
 import "./Destinations.scss";
 import { HiOutlineUserGroup } from "react-icons/hi";
+import { Link } from "react-router-dom";
 interface DestinationsCardProps {
   tour: Tour;
+  showReadMore?: boolean;
 }
 
-function DestinationsCard({ tour }: DestinationsCardProps) {
+function DestinationsCard({ tour, showReadMore }: DestinationsCardProps) {
   return (
     <div className="destinations-card">
       <div className="destinations-cards">
@@ -26,6 +28,11 @@ function DestinationsCard({ tour }: DestinationsCardProps) {
           </div>
         </div>
         <p className="destinations-description">{tour.description}</p>
+        {showReadMore && (
+          <Link to={`/tours/${tour.id}`} className="read-more">
+            Read More <span>→</span>
+          </Link>
+        )}
       </div>
     </div>
   );

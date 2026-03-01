@@ -1,0 +1,69 @@
+@use "../../../styles/variable" as v;
+.specialOffers {
+  position: relative;
+  background-color: v.$third-bg-color;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  &-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: v.$navbar-bg-color;
+    backdrop-filter: blur(80px);
+    padding: 50px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 550px;
+    z-index: 2;
+  }
+  &-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 40%;
+    z-index: 1;
+
+    img {
+      position: absolute;
+      bottom: -55px;
+      right: 0;
+      height: 150%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}
+.specialOffers {
+  // ...styles
+
+  @media (max-width: 985px) {
+    flex-direction: column;
+
+    &-container {
+      flex-direction: column;
+    }
+    &-text {
+      width: 100%;
+    }
+    &-img {
+      position: relative;
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

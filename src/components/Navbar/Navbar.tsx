@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./navbar.scss";
 import Logo from "../../assets/logo.jpg";
 import { useState } from "react";
@@ -11,10 +11,12 @@ const navItems = [
 ];
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
+  const isTourPage = location.pathname.startsWith("/tours");
   const handToggleMenu = () => setIsOpen(!isOpen);
   return (
-    <div className="navbar-wrapper">
+    <div className={`navbar-wrapper ${isTourPage ? "navbar-white" : ""}`}>
       <header className="logo">
         <img className="logo_icon" src={Logo} alt="logo" />
         <span className="logo_prefix">tours to</span>

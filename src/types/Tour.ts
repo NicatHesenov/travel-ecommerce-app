@@ -7,4 +7,5 @@ export default interface Tour {
   duration: string;
   groupSize: number;
   description: string;
+  gallery: string[];
 }

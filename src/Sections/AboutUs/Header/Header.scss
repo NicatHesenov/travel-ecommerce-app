@@ -1,0 +1,44 @@
+@use "../../../styles/variable" as v;
+
+.aboutHeader-container {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: v.$primary-color;
+  gap: 1.5rem;
+  background-image: url("./assets/AboutHeader.jpg");
+  background-size: cover;
+  background-position: center;
+  .aboutHeader-title {
+    font-family: Podcast;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+  }
+  .aboutHeader-text {
+    width: 40%;
+    min-width: 300px;
+    font-family: Open Sans;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+  }
+  .aboutHeader-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    height: 55;
+    opacity: 1;
+    border-radius: 50px;
+    border-width: 1.5px;
+    padding: 14px 24px;
+  }
+}
