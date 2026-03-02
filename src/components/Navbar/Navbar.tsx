@@ -7,7 +7,6 @@ const navItems = [
   { id: 1, title: "Home", path: "/" },
   { id: 2, title: "About Us", path: "/about" },
   { id: 3, title: "Tour Packages", path: "/tours" },
-  { id: 4, title: "Contact", path: "/contact" },
 ];
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,11 +46,6 @@ function Navbar() {
         </ul>
 
         <div className="navbar-actions">
-          <select className="action-select">
-            <option value="en">En</option>
-            <option value="Az">Az</option>
-          </select>
-
           <div className="auth-buttons">
             <Button variant="login">Login</Button>
             <Button variant="signup">Sign Up</Button>

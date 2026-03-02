@@ -14,7 +14,6 @@ const navItems = [
   { id: 1, title: "Home", path: "/" },
   { id: 2, title: "About Us", path: "/about" },
   { id: 3, title: "Tour Packages", path: "/tours" },
-  { id: 4, title: "Contact", path: "/contact" },
 ];
 function Footer() {
   return (
@@ -69,10 +68,11 @@ function Footer() {
                 Tuscany
               </li>
               <li>
-                <FaPhoneAlt className="icon" /> +39 346 368 5708
+                <FaPhoneAlt className="icon" /> +994 055 325 81 34
               </li>
               <li>
-                <FaEnvelope className="icon" /> italiainlimo@gmail.com
+                <FaEnvelope className="icon" />
+                hasanovnicat1122@gmail.com
               </li>
             </ul>
           </div>

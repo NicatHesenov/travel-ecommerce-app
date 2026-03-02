@@ -139,9 +139,11 @@ $background-transparent: transparent;
   position: relative;
   list-style: none;
   text-decoration: none;
-  a {
+  a,
+  .login {
     color: #333;
   }
+
   .bar {
     background-color: #333;
   }

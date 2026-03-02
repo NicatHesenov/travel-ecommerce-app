@@ -10,7 +10,6 @@ interface CustomSliderProps<T> {
   slidesPerView?: number;
 }
 
-// T extends { id: string } yazırıq ki, map edərkən key={item.id} xəta verməsin
 function CustomSlider<T extends { id: string }>({
   data,
   renderItem,

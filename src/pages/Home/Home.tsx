@@ -1,4 +1,3 @@
-import BookingForm from "../../components/BookingForm/BookingForm";
 import AboutCompany from "../../Sections/Home/AboutCompany/AboutCompany";
 import Destinations from "../../Sections/Home/Destinations/Destinations";
 import Header from "../../Sections/Home/Header/Header";
@@ -13,7 +12,6 @@ function Home() {
       <AboutCompany />
       <SpecialOffers />
       <TravelServices />
-      <BookingForm />
     </div>
   );
 }
