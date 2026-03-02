@@ -1,5 +1,5 @@
 import "./TravelServices.scss";
-import Bike from "./assets/bike.png";
+import Bike from "./assets/Bike.png";
 import Humans from "./assets/Humans.jpg";
 import Car from "./assets/Car.jpg";
 import Bus from "./assets/Bus.png";
