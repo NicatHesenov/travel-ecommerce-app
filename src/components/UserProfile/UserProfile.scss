@@ -1,0 +1,41 @@
+.user-profile {
+  position: relative;
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    .lang {
+      color: white;
+      font-size: 14px;
+    }
+    .avatar-circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #fff;
+    }
+  }
+  .profile-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 150px;
+    .item {
+      padding: 12px;
+      color: #333;
+      cursor: pointer;
+      &:hover {
+        background: #f5f5f5;
+      }
+    }
+    .logout {
+      border-top: 1px solid #eee;
+      color: red;
+    }
+  }
+}

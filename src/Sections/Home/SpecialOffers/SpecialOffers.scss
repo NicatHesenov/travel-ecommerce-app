@@ -1,69 +1,122 @@
 @use "../../../styles/variable" as v;
+
 .specialOffers {
   position: relative;
   background-color: v.$third-bg-color;
   min-height: 400px;
   display: flex;
   align-items: center;
+
   &-container {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
   }
+
   &-text {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    background-color: v.$navbar-bg-color;
+    justify-content: space-between;
+    background-color: #ffffff4d;
     backdrop-filter: blur(80px);
     padding: 50px;
+    gap: 10px;
     border-radius: 24px;
     width: 100%;
     max-width: 550px;
+    height: 330px;
     z-index: 2;
+    text-align: center;
   }
+
+  &-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  &-description {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
   &-img {
     position: absolute;
     right: 0;
     bottom: 0;
     height: 100%;
-    width: 40%;
+    width: 45%;
     z-index: 1;
 
     img {
       position: absolute;
-      bottom: -55px;
+      bottom: 0;
       right: 0;
-      height: 150%;
+      height: 120%;
       width: auto;
       object-fit: contain;
     }
   }
-}
-.specialOffers {
-  // ...styles
 
   @media (max-width: 985px) {
-    flex-direction: column;
+    min-height: auto;
+    padding: 60px 0 0 0;
 
     &-container {
       flex-direction: column;
+      gap: 40px;
     }
+
     &-text {
-      width: 100%;
+      width: 90%;
+      max-width: 600px;
+      height: auto;
+      padding: 40px 30px;
+      margin-bottom: 0;
+      gap: 25px;
+      justify-content: center;
     }
+
+    &-title {
+      font-size: 26px;
+    }
+
+    &-description {
+      font-size: 16px;
+    }
+
     &-img {
       position: relative;
       width: 100%;
       height: auto;
+      display: flex;
+      justify-content: center;
+      right: auto;
+      bottom: auto;
 
       img {
-        width: 100%;
         position: relative;
-        margin-bottom: 30px;
+        height: auto;
+        width: 100%;
+        max-width: 350px;
+        display: block;
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &-text {
+      padding: 30px 20px;
+      gap: 20px;
+    }
+    &-title {
+      font-size: 22px;
     }
   }
 }

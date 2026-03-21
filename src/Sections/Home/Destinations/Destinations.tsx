@@ -9,8 +9,10 @@ function Destinations() {
   if (error) return <p>Error loading tours!</p>;
 
   return (
-    <div className="Destinations">
-      <h2>Explore Our Popular Destinations</h2>
+    <div className="destinations">
+      <h2 className="destinationsHeader-title">
+        Explore Our Popular Destinations
+      </h2>
 
       <CustomSlider
         data={data}

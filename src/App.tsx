@@ -3,20 +3,28 @@ import "./App.scss";
 import MainLayout from "./Layout/MainLayout/MainLayout";
 import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import TourPackages from "./pages/TourPackages/TourPackages";
 import TourDetails from "./Sections/TourPackages/TourDetails/TourDetails";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Checkout from "./components/Checkout/Checkout";
+import Tours from "./Sections/TourPackages/Tours/Tours";
+import TourDescription from "./Sections/TourPackages/TourDetails/TourDescription";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<AboutUs />} />
-        <Route path="tours" element={<TourPackages />} />
-        <Route path="/tours/:id" element={<TourDetails />} />
-        <Route path="*" element={<div>Səhifə tapılmadı (404)</div>} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<AboutUs />} />
+          <Route path="tours" element={<Tours />} />
+          <Route path="tours/:id" element={<TourDetails />}>
+            <Route index element={<TourDescription />} />
+            <Route path="checkout" element={<Checkout />} />
+          </Route>
+        </Route>
+      </Routes>
+    </>
   );
 }
 

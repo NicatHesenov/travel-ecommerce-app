@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
-
 import "swiper/swiper-bundle.css";
 
 interface CustomSliderProps<T> {
@@ -23,11 +22,10 @@ function CustomSlider<T extends { id: string }>({
       spaceBetween={25}
       slidesPerView={slidesPerView}
       navigation
-      pagination={{ clickable: true }}
       breakpoints={{
-        320: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: slidesPerView },
+        200: { slidesPerView: 1, spaceBetween: 10 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 30 },
       }}
     >
       {data.map((item) => (

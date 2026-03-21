@@ -70,12 +70,12 @@ $background-transparent: transparent;
   a {
     text-decoration: none;
     color: v.$primary-color;
-    font-weight: 500;
     transition: 0.3s;
+    @extend %font-family-menu;
   }
 
   .active {
-    border-bottom: 2px solid v.$secondary-color;
+    border-bottom: 3px solid v.$secondary-color;
   }
 }
 .navbar-actions {
@@ -115,8 +115,11 @@ $background-transparent: transparent;
       width: 100%;
       background-color: v.$navbar-bg-color;
       padding: 2rem;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
       animation: slideDown 0.3s ease-out;
+    }
+    a {
+      color: black;
     }
   }
 

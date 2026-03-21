@@ -11,6 +11,9 @@
     flex: 1;
     min-width: 250px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &-img {
@@ -20,13 +23,16 @@
     border-radius: 4px;
   }
   &-title {
-    margin-top: 15px;
-    font-size: 1.1rem;
     font-weight: bold;
+    font-family: Open Sans;
+    font-size: 18px;
   }
 
   &-text {
-    font-size: 0.9rem;
     color: #555;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
   }
 }

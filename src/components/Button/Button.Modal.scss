@@ -4,6 +4,7 @@
   background: none;
   color: v.$primary-color;
   cursor: pointer;
+  @extend %font-family-login;
 }
 
 .signup {
@@ -13,7 +14,9 @@
   border-radius: 50px;
   color: white;
   cursor: pointer;
+  @extend %font-family-login;
 }
+
 .contactUs {
   border: none;
   background-color: v.$secondary-color;
@@ -23,4 +26,24 @@
   width: fit-content;
   margin: 0 auto;
   cursor: pointer;
+  @extend %font-family-login;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 985px) {
+    padding: 0.7rem 4rem;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.6rem 3rem;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }

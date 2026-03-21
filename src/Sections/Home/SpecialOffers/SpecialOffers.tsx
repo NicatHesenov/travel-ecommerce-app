@@ -14,7 +14,14 @@ function SpecialOffers() {
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </p>
-          <Button variant="contactUs">Contact Us</Button>
+          <Button
+            variant="contactUs"
+            onClick={() =>
+              (window.location.href = "mailto:hasanovnicat1122@gmail.com")
+            }
+          >
+            Contact Us
+          </Button>
         </div>
         <div className="specialOffers-img">
           <img src={img} alt="" />

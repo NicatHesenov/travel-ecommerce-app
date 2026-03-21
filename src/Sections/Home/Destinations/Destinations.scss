@@ -1,50 +1,123 @@
 @use "../../../styles/variable" as v;
-.Destinations {
+
+.destinations {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  //   background-color: v.$card-bg-color;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  padding: 2rem 6rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding: 2rem 3rem;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .destinationsHeader-title {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 5vw, 32px);
+    text-align: left;
+    margin: 0;
+    color: #333;
+  }
 }
+
+.destinations > div:last-child {
+  width: 100%;
+}
+
 .destinations-cards {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 0;
 
-  gap: 5px;
-  font-size: 17px;
-  padding: 0, 25rem;
   img {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
+    display: block;
+
+    @media (max-width: 768px) {
+      height: 220px;
+    }
+  }
+
+  .destionsCard-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: clamp(18px, 4vw, 24px);
+    line-height: 1.2;
+    margin: 5px 0 0 0;
   }
 }
+
 .destinations-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 16px;
+  margin-bottom: 5px;
+
   .price {
     color: v.$secondary-color;
+    font-weight: 800;
+    font-size: 18px;
   }
 }
+
 .destinations-details {
   display: flex;
   justify-content: space-between;
-  color: v.$secondary-color;
+  align-items: center;
+  color: v.$third-bg-color;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 0;
 
   div {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
+
+    svg {
+      font-size: 18px;
+    }
   }
 }
-.read-more {
-  text-decoration: none;
-  color: v.$secondary-color;
-}
+
 .destinations-description {
   @include v.line-clamp(2);
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: v.$secondary-color;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: gap 0.3s ease;
+
+  &:hover {
+    gap: 10px;
+    text-decoration: underline;
+  }
 }

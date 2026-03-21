@@ -25,6 +25,9 @@
         font-size: 18px;
         margin-bottom: 20px;
         font-weight: 600;
+        font-family: Open Sans;
+        font-weight: 800;
+        font-style: ExtraBold;
       }
       ul {
         list-style: none;
@@ -37,6 +40,7 @@
           align-items: center;
           gap: 10px;
           color: #ccc;
+          @extend %font-family-login;
         }
 
         a {
@@ -74,6 +78,10 @@
 .footer-copyright {
   text-align: center;
   margin-top: 20px;
-  font-size: 13px;
   color: #999;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 26px;
 }

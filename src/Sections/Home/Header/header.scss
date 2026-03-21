@@ -14,6 +14,20 @@
   background-position: center;
 }
 .header-title {
-  @extend %font-family-logo;
-  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-style: Regular;
+  font-size: 72px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.header-text {
+  font-family: Open Sans;
+  font-weight: 500;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
 }

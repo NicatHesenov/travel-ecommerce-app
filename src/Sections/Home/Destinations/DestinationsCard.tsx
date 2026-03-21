@@ -13,8 +13,7 @@ function DestinationsCard({ tour, showReadMore }: DestinationsCardProps) {
     <div className="destinations-card">
       <div className="destinations-cards">
         <img className="destions-img" src={tour.image} alt={tour.title} />
-        <h3 className="destions-title">{tour.title}</h3>
-        <p>{tour.location}</p>
+        <h3 className="destionsCard-title">{tour.title}</h3>
         <p className="destinations-price">
           {" "}
           from <span className="price">{tour.price} €</span>
